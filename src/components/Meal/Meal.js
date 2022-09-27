@@ -1,8 +1,12 @@
 import React from 'react';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faRunning} from '@fortawesome/free-solid-svg-icons';
 import './Meal.css';
 
 const Meal = (props) => {
-	const {strMeal, strMealThumb, strYoutube, strInstructions} = props.meal;
+	const {meal, addToCart} = props;
+	const {strMeal, strMealThumb, strYoutube, strInstructions} = meal;
 	return (
 		<div className="product-card">
 			<div className="product-img">
@@ -10,12 +14,15 @@ const Meal = (props) => {
 			</div>
 			<div className="product-info">
 				<h6 className="product-name">Name: {strMeal}</h6>
-				<p className="youtbue">Youtube : {strYoutube}</p>
-				<p className="price">Rating : {strInstructions.slice(0, 100)}...</p>
+				<a href={strYoutube} className="youtbue">
+					Youtube
+				</a>
+				<p className="price">Rating : {strInstructions.slice(0, 90)}...</p>
 			</div>
-			<button className="btn-cart">
+			<button onClick={() => addToCart(meal)} className="btn-cart">
 				<p>Add to Cart </p>
-				{/* <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon> */}
+				{/* <FontAwesomeIcon icon={youtube}></FontAwesomeIcon> */}
+				<FontAwesomeIcon icon={faRunning} />
 			</button>
 		</div>
 	);

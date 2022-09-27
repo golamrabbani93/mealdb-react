@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 150px;
+	padding: 0 100px;
 }
 .header .logo a:hover,
 .link a:hover {
