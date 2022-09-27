@@ -10,13 +10,13 @@ const Meal = (props) => {
 			</div>
 			<div className="product-info">
 				<h6 className="product-name">Name: {strMeal}</h6>
-				<p className="price">Youtube : {strYoutube}</p>
+				<p className="youtbue">Youtube : {strYoutube}</p>
 				<p className="price">Rating : {strInstructions.slice(0, 100)}...</p>
 			</div>
-			{/* <button className="btn-cart">
+			<button className="btn-cart">
 				<p>Add to Cart </p>
-				<FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
-			</button> */}
+				{/* <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon> */}
+			</button>
 		</div>
 	);
 };

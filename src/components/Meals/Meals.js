@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Cart from '../Cart/Cart';
 import Meal from '../Meal/Meal';
 import './Meals.css';
 
@@ -19,7 +20,7 @@ const Meals = () => {
 				))}
 			</div>
 			<div className="meals-sidebar">
-				<h2>Add Some Meal</h2>
+				<Cart></Cart>
 			</div>
 		</div>
 	);
