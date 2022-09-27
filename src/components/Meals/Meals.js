@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import Meal from '../Meal/Meal';
+import './Meals.css';
 
 const Meals = () => {
 	const [meals, setMeals] = useState([]);
@@ -8,8 +10,19 @@ const Meals = () => {
 			.then((res) => res.json())
 			.then((meals) => setMeals(meals.meals));
 	}, []);
-
-	return <div>{meals.map((meal) => console.log(meal))}</div>;
+	console.log(meals);
+	return (
+		<div className="container">
+			<div className="Meals">
+				{meals.map((meal) => (
+					<Meal meal={meal} key={meal.idMeal}></Meal>
+				))}
+			</div>
+			<div className="meals-sidebar">
+				<h2>Add Some Meal</h2>
+			</div>
+		</div>
+	);
 };
 
 export default Meals;

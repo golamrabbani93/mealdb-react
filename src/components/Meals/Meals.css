@@ -1,0 +1,17 @@
+.container {
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+}
+.Meals {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin: 50px;
+}
+.meals-sidebar {
+	background-color: orange;
+	text-align: center;
+	color: whitesmoke;
+	position: sticky;
+	top: 0;
+}
